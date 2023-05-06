@@ -42,6 +42,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  width: 20vw;
 }
 
 .animation-text-container {
