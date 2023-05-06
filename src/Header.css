@@ -1,0 +1,39 @@
+.Header * {
+  /* border: 1px black solid; */
+  font-family: "Archivo", sans-serif;
+}
+
+.Header {
+  display: flex;
+  height: 3em;
+  background-color: #c8c7c7;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  text-align: left;
+  display: flex;
+  align-items: center; /* Vertical spacing */
+}
+
+.header-text {
+  font-family: "Archivo", sans-serif;
+  width: 70vw;
+  font-size: .8em;
+  font-weight: 500;
+  overflow: hidden;
+  color: #080707;
+}
+
+.right-side {
+  width: 35vw;
+  display: flex;
+}
+
+.right-side img {
+  width: 5vw;
+  margin-right: 1em;
+}
+
+.Header .back-button {
+  width: 5vw;
+  margin-right: 1em;
+}

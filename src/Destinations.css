@@ -1,0 +1,51 @@
+.fix-destinations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Destinations {
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.Destinations div {
+  height: 10vh;
+  background-color: #242b30;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+}
+
+.Destinations .small {
+  height: 5vh;
+  font-size: 0.8em;
+}
+
+/* spacing the lazy way */
+.Destinations div p {
+  width: 5em;
+}
+
+.Destinations .light {
+  background-color: #44565a;
+}
+
+/* more spacing the lazy way */
+.blank {
+  height: 0.2em;
+}
+
+.top {
+  border-top-left-radius: 0.4em;
+  border-top-right-radius: 0.4em;
+}
+
+.bottom {
+  border-bottom-left-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+}

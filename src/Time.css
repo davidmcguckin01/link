@@ -1,0 +1,13 @@
+.Time {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.time-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
