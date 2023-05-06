@@ -4,7 +4,6 @@ import TimeBlock from "./TimeBlock";
 
 function Time() {
   const [seconds, setSeconds] = useState(59);
-  const [countingDown, setCountingDown] = useState(true);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
