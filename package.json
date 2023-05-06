@@ -1,11 +1,9 @@
 {
-  "name": "my-app",
+  "name": "mlink",
   "homepage": "https://jaiko657.github.io/mlink",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@capacitor/android": "5.0.1",
-    "@capacitor/core": "^5.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
