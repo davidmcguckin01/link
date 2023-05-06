@@ -13,7 +13,11 @@ const redgrayImages = importAll(
   require.context("./animation-images/redgrey", false, /\.(png|jpe?g|svg)$/)
 );
 const yellowpurpleImages = importAll(
-  require.context("./animation-images/yellowpurple", false, /\.(png|jpe?g|svg)$/)
+  require.context(
+    "./animation-images/yellowpurple",
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
 );
 const greywhiteImages = importAll(
   require.context("./animation-images/whitegrey", false, /\.(png|jpe?g|svg)$/)
@@ -46,7 +50,7 @@ function Animation() {
 
   const toggleAnimationColor = () => {
     setCurrentImageSet((currentImageSet + 1) % imageSets.length);
-  }
+  };
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -56,6 +60,14 @@ function Animation() {
 
     return () => clearInterval(intervalId);
   }, []);
+
+  const getFormatedTime = (time) => {
+    var str = time.toLocaleTimeString()
+    if(str.length != 8) {
+      str = "0" + str
+    }
+    return str.slice(0,5)
+  };
 
   return (
     <div className="fix-destination">
@@ -69,8 +81,9 @@ function Animation() {
               onClick={toggleTextInput}
             />
           </div>
-          <div className="image-container"
-          onClick={() => toggleAnimationColor()}
+          <div
+            className="image-container"
+            onClick={() => toggleAnimationColor()}
           >
             <img
               src={imageSets[currentImageSet][imageIndex]}
@@ -78,9 +91,7 @@ function Animation() {
               alt="Animation"
             />
             <div className="animation-text-container">
-              <p className="time-text">
-                {currentTime.toLocaleTimeString().slice(0, 5)}
-              </p>
+              <p className="time-text">{getFormatedTime(currentTime)}</p>
               <p className="code-text">{currentCode}</p>
             </div>
           </div>
