@@ -9,8 +9,8 @@ const ExpiryDate = () => {
     month: "short",
     year: "numeric",
   };
-  const formattedDate = currentDate.toLocaleDateString("en-US", options);
-  const expires = `Expires ${formattedDate}`.replace(',', '').replace(',', '');
+  const formattedDate = currentDate.toLocaleDateString("en-UK", options);
+  const expires = `Activated on ${formattedDate}`.replace(',', '').replace(',', '');
   return (
     <div className="ExpiryDate">
       <p>{expires}</p>

@@ -62,13 +62,13 @@ function Animation() {
   }, []);
 
   const getFormatedTime = (time) => {
-    var str = time.toLocaleTimeString()
-    if(str.length != 8) {
-      str = "0" + str
+    var str = time.toLocaleTimeString("en-UK", {hour12: false});
+    if (str.length != 8) {
+      str = "0" + str;
     }
-    return str.slice(0,5)
+    return str.slice(0, 5);
   };
-
+  const busType = "Goldline"
   return (
     <div className="fix-destination">
       <div className="Animation">
@@ -80,6 +80,9 @@ function Animation() {
               alt="translink logo"
               onClick={toggleTextInput}
             />
+            <p className="bus-type"
+              onClick={toggleTextInput}
+            >{busType}</p>
           </div>
           <div
             className="image-container"

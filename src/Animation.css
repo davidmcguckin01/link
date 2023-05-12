@@ -14,7 +14,7 @@
   flex-direction: row;
   text-align: center;
   align-items: stretch;
-  height: 12vh; /* 100% of the viewport height */
+  height: 15vh;
 }
 
 .rail-logo-container,
@@ -22,13 +22,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #002f76;
+  background-color: #b29130;
+}
+.bus-type {
+  position: absolute;
+  text-align: center;
+  padding-top: 5.5em;
+  font-weight: bold;
+  color: white;
+  font-family: "Archivo", sans-serif;
 }
 
 .rail-logo,
 .animation-image {
   /* padding-top: 10px; */
   height: 100%; /* Images will have the same height as their parent container */
+}
+
+.rail-logo {
+  padding-left: .1em;
+  padding-right: .1em;
+  padding-bottom: 1em;
 }
 
 .rail-logo-container {
@@ -63,7 +77,7 @@
   max-width: 80%;
   text-align: center;
   color: white;
-  font-size: 4em;
+  font-size: 4.5em;
   font-family: "Archivo", sans-serif;
 }
 
