@@ -8,6 +8,10 @@
   margin-top: 1em;
 }
 
+.hidden {
+  display: none;
+}
+
 .wrapper {
   /* border: green 5px solid; */
   display: flex;
@@ -22,8 +26,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #b29130;
 }
+
 .bus-type {
   position: absolute;
   text-align: center;
@@ -83,26 +87,29 @@
 
 .time-text {
   animation: fade 3.45s infinite;
+  animation-delay: 1.725s;
 }
 .code-text {
   animation: fade 3.45s infinite;
-  animation-delay: 1.725s;
 }
 
 @keyframes fade {
   0% {
-    opacity: 1;
-  }
-  5% {
-    opacity: 1;
-  }
-  75% {
     opacity: 0;
   }
-  85% {
+  10% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
