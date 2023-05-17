@@ -35,6 +35,7 @@
   font-weight: bold;
   color: white;
   font-family: "Archivo", sans-serif;
+  font-size: 0.8em;
 }
 
 .rail-logo,
@@ -44,8 +45,8 @@
 }
 
 .rail-logo {
-  padding-left: .1em;
-  padding-right: .1em;
+  padding-left: .6em;
+  padding-right: .6em;
   padding-bottom: 1em;
 }
 
@@ -90,6 +91,7 @@
   animation-delay: 1.725s;
 }
 .code-text {
+  margin-right: .1em;
   animation: fade 3.45s infinite;
 }
 

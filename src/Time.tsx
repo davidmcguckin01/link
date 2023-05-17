@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Time.css";
 import TimeBlock from "./TimeBlock";
 
-const Time: React.FC = () => {
+const Time: React.FC<any> = ({hours}) => {
   const [seconds, setSeconds] = useState(59);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Time: React.FC = () => {
     <div className="Time">
       <div className="time-container">
         <TimeBlock stringProp="Days" numberProp={undefined} />
-        <TimeBlock stringProp="Hours" numberProp={1} />
+        <TimeBlock stringProp="Hours" numberProp={hours} />
         <TimeBlock stringProp="Minutes" numberProp={26} />
         <TimeBlock stringProp="Seconds" numberProp={seconds} />
       </div>

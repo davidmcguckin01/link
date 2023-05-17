@@ -33,14 +33,14 @@ const Animation: React.FC<AnimationProps> = ({ animationProps }) => {
   );
   const [currentTime, setCurrentTime] = useState(new Date());
   const [currentCode, setCurrentCode] = useState(animationProps[1]);
-  const [currentRoute, setCurrentRoute] = useState(animationProps[2]);
-  const [currentColor, setCurrentColor] = useState(animationProps[3]);
+  const currentRoute = (animationProps[2]);
+  const currentColor = (animationProps[3]);
   const [showTextInput, setShowTextInput] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const code: string = event.target.elements.textInput.value.toUpperCase();
-    setCurrentCode(code == "" ? currentCode : code);
+    setCurrentCode(code === "" ? currentCode : code);
     setShowTextInput(false);
   };
 
@@ -67,11 +67,12 @@ const Animation: React.FC<AnimationProps> = ({ animationProps }) => {
     }, 10);
 
     return () => clearInterval(intervalId);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getFormatedTime = (time) => {
     var str = time.toLocaleTimeString("en-UK", { hour12: false });
-    if (str.length != 8) {
+    if (str.length !== 8) {
       str = "0" + str;
     }
     return str.slice(0, 5);
@@ -85,15 +86,15 @@ const Animation: React.FC<AnimationProps> = ({ animationProps }) => {
               src={NiRail}
               className="rail-logo"
               alt="translink logo"
-              onClick={toggleTextInput}
+              onClick={toggleAnimationColor}
             />
-            <p className="bus-type" onClick={toggleTextInput}>
+            <p className="bus-type" onClick={toggleAnimationColor}>
               {currentRoute}
             </p>
           </div>
           <div
             className="image-container"
-            onClick={() => toggleAnimationColor()}
+            onClick={() => toggleTextInput()}
           >
             <img
               src={currentAnimation}

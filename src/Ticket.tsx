@@ -15,9 +15,9 @@ const Ticket: React.FC<TicketProps> = ({ticketProps}) => {
   const destinationProps = [ticketProps[4], ticketProps[5]];
   return (
     <div className="App">
-      <Header />
+      <Header headerProps={ticketProps[5] === "City Zone" ? "Adult Metro Single" : 'Adult Goldline - Single'}/>
       <Animation animationProps={animationProps}/>
-      <Time />
+      <Time hours={ticketProps[5] === "City Zone" ? 7 : 1}/>
       <ExpiryDate />
       <Destinations destinationProps={destinationProps}/>
     </div>
