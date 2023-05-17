@@ -15,12 +15,21 @@ const Home: React.FC<any> = ({ onClick, busTypeProps }) => {
       return {};
     }
   };
+  const getTitleStyle = () => {
+    if (busTitle === "Goldline") {
+      return { color: "#4d6ecf" };
+    } else if (busTitle === "Metro") {
+      return { color: "#29d184" };
+    } else {
+      return {};
+    }
+  };
 
   return (
     <div onClick={onClick} className="BusType">
       <img className="logo" style={getLogoStyle()} src={BusLogo} alt="" />
       <div className="text-container">
-        <h1 className="title">{busTitle}</h1>
+        <h1 className="title" style={getTitleStyle()}>{busTitle}</h1>
         <p className="bus-info">{busInfo}</p>
       </div>
     </div>
