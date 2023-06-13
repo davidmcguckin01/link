@@ -5,6 +5,7 @@ import {
   Routes as Switch,
 } from "react-router-dom";
 
+import Login from "./Login";
 import Home from "./Home";
 import Ticket from "./Ticket";
 
@@ -25,7 +26,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/" Component={() => <Home updateTicketProps={updateTicketProps}/>} />
+        <Route path="/" Component={() => <Login />}/>
+        <Route path="/Home" Component={() => <Home updateTicketProps={updateTicketProps}/>} />
         <Route
           path="/Ticket"
           Component={() => <Ticket ticketProps={ticketProps} />}
