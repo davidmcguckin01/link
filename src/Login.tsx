@@ -7,10 +7,7 @@ import "./Login.css";
 const Login = () => {
   function generateCodeword(): string {
     const date: any = new Date();
-    const dayOfYear = Math.floor(
-      (date - date.getFullYear(), 0, 0) / (1000 * 60 * 60 * 24)
-    );
-    const randomNumber = (dayOfYear % 256) + 1;
+    const dateNumber: number = date.getDay() + date.getMonth();
     const words: string[] = [
       "ados",
       "airs",
@@ -269,7 +266,7 @@ const Login = () => {
       "zonk",
       "zubu",
     ];
-    return words[randomNumber];
+    return words[dateNumber];
   }
 
   const [codeword, setCodeword] = useState("");
